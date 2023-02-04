@@ -1,0 +1,24 @@
+{
+  "name": "esapet",
+  "version": "1.0.0",
+  "description": "Emotional Support Animal Messaging Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaryoushShah/esapet.git"
+  },
+  "keywords": [],
+  "author": "Daryoush Ghoreishi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaryoushShah/esapet/issues"
+  },
+  "homepage": "https://github.com/DaryoushShah/esapet#readme",
+  "private": true,
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
