@@ -17,8 +17,13 @@ app.post('/sms', (req, res) => {
   console.log(req.body.Body);
   /* Functions */
   if (req.body.Body.toLowerCase().slice(0, 8) == 'name dog') {
-    
-    twiml.message('Hi!');
+    /* Check if there is a name */
+    if(req.body.Body.length < 10){
+      twiml.message = 'Please add a name longer than 0 characters'
+    }else{
+      dog["name"] = req.body.Body.slice(9, req.body.Body.length);
+      twiml.message(`Your dog is now named ${dog["name"]}`);
+    }
   } else if (req.body.Body == 'feed') {
     twiml.message('Goodbye');
   } else if (req.body.Body.toLowerCase() == 'walk'){
