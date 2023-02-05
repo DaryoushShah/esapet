@@ -135,7 +135,7 @@ app.post('/sms', async (req, res) => {
   /* Fetch Functionality */
   } else if (req.body.Body.toLowerCase() == 'play fetch'){
     /* Generate responses */
-    const response = _getResponse('play fetch');
+    const response = _getResponse('fetch');
     /* Generate Image */
     const imageURL = _getImageURL('fetch');
     /* Set message parameters */
@@ -173,10 +173,7 @@ app.post('/sms', async (req, res) => {
     });
     const message = twiml.message();
     if(self_harm_detection == true){
-      message.body(response.data.choices[0].text.trim()
-       + `We are going to reach out to ${userInfo['emergencyContact']} to check in on you. In the mean time watch this funny video. Or if you aren't interested in watching a video feel free to just talk to me. Please don't do anything rash in the moment. Take a deep breath. It'll be ok.`
-      );
-      message.media('https://www.youtube.com/watch?v=5gPNRYZM7c4');
+      message.body(response.data.choices[0].text.trim() + `We are going to reach out to ${userInfo['emergencyContact']} to check in on you. In the meantime while you wait for ${userInfo['emergencyContact']} to call or text you free to just talk to me. Please don't do anything rash in the moment. Take a deep breath. It'll be ok.`);
       /* Message Emergency contact */
       client.messages
         .create({
