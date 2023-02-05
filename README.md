@@ -1,4 +1,4 @@
-# esapet
+# ESApet
 ## Emotional Support Animal Messaging Service
 
 ### Setup:
@@ -17,3 +17,4 @@
 12. With the account, generate an API Key
 13. Fill in API key into OPENAI_API_KEY 
 14. install ngrok 
+15. On the terminal, ngrok 4567 
